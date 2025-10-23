@@ -14,19 +14,14 @@ log.maxDays = 3
 # transport.tls.trustedCaFile = "/share/frp/fullchain.pem"
 # transport.tls.serverName = "your_server_name"
 
-webServer.addr = "0.0.0.0"
-webServer.port = 7500
-webServer.user = "admin"
-webServer.password = "123456789"
-
 [[proxies]]
 name = "your_proxy_name"
-type = "http"
-customDomains = ["your_domain"]
+type = "tcp"
 transport.useEncryption = true
 transport.useCompression = true
 localPort = 8123
-localIP = "0.0.0.0"
+localIP = "127.0.0.1"
+remortPort = 8123
 
 # [proxies.plugin]
 # type = "https2http"
