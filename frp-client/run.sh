@@ -16,7 +16,7 @@ sed -i "s/serverPort = 7000/serverPort = $(bashio::config 'serverPort')/" $CONFI
 sed -i "s/auth.token = \"123456789\"/auth.token = \"$(bashio::config 'authToken')\"/" $CONFIG_PATH
 sed -i "s/type = \"tcp\"/type = \"$(bashio::config 'type')\"/" $CONFIG_PATH
 sed -i "s/localPort = 8123/localPort = $(bashio::config 'localPort')/" $CONFIG_PATH
-sed -i "s/remortPort = 8123/remortPort = $(bashio::config 'remotePort')/" $CONFIG_PATH
+sed -i "s/remotePort = 8123/remotePort = $(bashio::config 'remotePort')/" $CONFIG_PATH
 
 
 bashio::log.info "Starting frp client"
